@@ -1,0 +1,14 @@
+<div class="border-form-div">
+  <h2>Sign in</h2>
+  <%= form_for(:sessions, url: login_path) do |f| %>
+      <%= f.email_field :email, :autofocus => true, :placeholder => 'Email address', :class => 'col-md-12' %>
+      <%= f.password_field :password, :placeholder => 'Password', :class => 'col-md-12' %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <%= f.submit "Sign in", :class => 'btn btn-success' %>
+  <% end %>
+  <hr/>
+  <p>New user? <%= link_to "Sign up", signup_path , class: "btn btn-primary"%></p>
+</div>

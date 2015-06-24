@@ -1,0 +1,11 @@
+<div class="border-form-div">
+  <h2>Sign up</h2>
+  <%= form_for(@user) do |f| %>
+      <%= render 'shared/user_error_messages' %>
+      <%= f.email_field :email, :autofocus => true, :placeholder => 'Email address', :class => 'col-md-12 form-control' %>
+      <%= f.text_field :name, :placeholder => 'Name', :class => 'col-md-12 form-control' %>
+      <%= f.password_field :password, :placeholder => 'Password', :class => 'col-md-12 form-control' %>
+      <%= f.password_field :password_confirmation, :placeholder => 'Password confirmation', :class => 'col-md-12 form-control' %>
+      <%= f.submit "Sign up", :class => 'btn btn-primary' %>
+  <% end %>
+</div>
